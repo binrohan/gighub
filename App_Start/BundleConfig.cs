@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace Gighub
+namespace GigHub
 {
     public class BundleConfig
     {

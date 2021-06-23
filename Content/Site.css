@@ -25,6 +25,11 @@ textarea {
     max-width: 280px;
 }
 
+.field-validation-error {
+    color: red;
+    font-weight: bold;
+}
+
 /*Boostrap Overrides*/
 .navbar-inverse {
     background-color: #ff4342;
@@ -64,3 +69,4 @@ textarea {
     font-size: 17px;
     border-radius: 9px;
 }
+

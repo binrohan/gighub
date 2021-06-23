@@ -35,10 +35,13 @@ textarea {
     background-color: #ff4342;
     border-color: #ff4342;
 }
-.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
+.navbar-inverse .navbar-nav > li > a {
     color: #fff;
 }
-.navbar-brand{
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+.navbar-brand {
     font-weight: 700;
 }
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
@@ -55,10 +58,12 @@ textarea {
 .form-group {
     margin-bottom: 20px;
 }
-.form-control {
+.form-control:not(select) {
     font-size: 17px;
-    padding: 20px 15px;
     border-radius: 9px;
+}
+.form-control:not(select) {
+    padding: 20px 15px;
 }
 .form-control:focus {
     box-shadow: none;

@@ -78,8 +78,8 @@ a:focus {
     border-color: #2196F3;
 }
 .btn {
-    padding: 7px 20px;
-    font-size: 17px;
+    /*padding: 7px 20px;
+    font-size: 17px;*/
     border-radius: 9px;
 }
 

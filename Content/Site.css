@@ -72,12 +72,10 @@ a:focus {
 .form-group {
     margin-bottom: 20px;
 }
-.form-control:not(select) {
+.form-control {
     font-size: 17px;
     border-radius: 9px;
-}
-.form-control:not(select) {
-    padding: 20px 15px;
+    height: 44px;
 }
 .form-control:focus {
     box-shadow: none;
@@ -130,4 +128,11 @@ a:focus {
 }
 .gigs > li .details .genre{
     font-size: 15px;
+}
+.gigs > li .actions {
+    font-size: 15px;
+    display: none;
+}
+.gigs > li:hover .actions{
+    display: block;
 }

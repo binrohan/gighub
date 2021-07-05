@@ -1,4 +1,5 @@
-﻿body {
+﻿
+body {
     padding-top: 90px;
     padding-bottom: 20px;
     font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -50,10 +51,19 @@ textarea {
 .navbar-brand {
     font-weight: 700;
 }
+.navbar-inverse .notifications {
+    position: relative;
+}
+.navbar-inverse .notifications .badge {
+    position: absolute;
+    top: 8px;
+    right: -1px;
+    background: #a80a0a;
+}
 .navbar-inverse .navbar-nav > 
 .open > a, 
 .navbar-inverse 
-.navbar-nav > 
+.navbar-nav >   
 .open > a:hover, 
 .navbar-inverse 
 .navbar-nav > 

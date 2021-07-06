@@ -43,7 +43,7 @@
         $(document).ready(function () {
             $.getJSON("/api/notifications", function (notifications) {
                 $('js-notifications-count')
-                    .text(notification.length)
+                    .text(notifications.length)
                     .removeClass('hide');
             });
 

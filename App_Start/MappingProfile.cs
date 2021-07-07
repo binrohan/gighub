@@ -8,9 +8,9 @@ namespace GigHub.App_Start
     {
         public MappingProfile()
         {
-            CreateMap<ApplicationUser, UserDto>();
-            CreateMap<Gig, GigDto>();
-            CreateMap<Notification, NotificationDto>();
+            Mapper.CreateMap<ApplicationUser, UserDto>();
+            Mapper.CreateMap<Gig, GigDto>();
+            Mapper.CreateMap<Notification, NotificationDto>();
         }
     }
 }

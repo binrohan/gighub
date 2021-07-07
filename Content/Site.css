@@ -38,6 +38,9 @@ textarea {
 .voffset80 { margin-top: 80px}
 
 /*Boostrap Overrides*/
+.popover {
+    box-shadow: none;
+}
 .navbar-inverse {
     background-color: #ff4342;
     border-color: #ff4342;
@@ -92,8 +95,6 @@ a:focus {
     border-color: #2196F3;
 }
 .btn {
-    /*padding: 7px 20px;
-    font-size: 17px;*/
     border-radius: 9px;
 }
 
@@ -145,4 +146,22 @@ a:focus {
 }
 .gigs > li:hover .actions{
     display: block;
+}
+
+.popover-notifications .popover-content{
+    padding: 0;
+}
+.popover-notifications ul.notifications {
+    list-style: none;
+    padding-left: 0;
+}
+.popover-notifications ul.notifications > li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.popover-notifications ul.notifications > li:last-child {
+    border-bottom: none;
+}
+.popover-notifications ul.notifications .highlight{
+    font-weight: bold;
 }

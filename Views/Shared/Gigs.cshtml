@@ -3,8 +3,19 @@
     ViewBag.Title = "Home Page";
 }
 <h1>@Model.Heading</h1>
+    @using (Html.BeginForm("Search", "Gigs"))
+    {
+        <div class="form-group">
+            <div class="input-group" id="search-gigs">
+                @Html.TextBoxFor(m => m.SearchTerm, new { @placeholder = "search by artist genre venue", @class = "form-control" })
+                <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-search"></i>
+                </span>
+            </div>
+        </div>
+    }
     <ul class="gigs voffset20">
-        @foreach(var gig in Model.UpcomingGigs)
+        @foreach (var gig in Model.UpcomingGigs)
         {
             <li>
                 <div class="date">
@@ -37,7 +48,7 @@
                 </div>
             </li>
 
-        }
+            }
     </ul>
 
 @section scripts

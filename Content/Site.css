@@ -89,8 +89,9 @@ a:focus {
     font-size: 17px;
     border-radius: 9px;
     height: 44px;
+    transition: none;
 }
-.form-control:focus {
+.form-control:focus{
     box-shadow: none;
     border-color: #2196F3;
 }
@@ -164,4 +165,7 @@ a:focus {
 }
 .popover-notifications ul.notifications .highlight{
     font-weight: bold;
+}
+#search-gigs{
+    width: 300px;
 }

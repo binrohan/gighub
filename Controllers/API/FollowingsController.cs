@@ -21,7 +21,7 @@ namespace GigHub.Controllers.API
         {
             var userId = User.Identity.GetUserId();
 
-            if (_context.Followings.Any(f => f.FolloweeId == dto.FolloweeId && f.FolloweeId == userId))
+            if (_context.Followings.Any(f => f.FolloweeId == dto.FolloweeId && f.FollowerId == userId))
             {
                 BadRequest("You are following the artist aleardy.");
             }
@@ -36,6 +36,25 @@ namespace GigHub.Controllers.API
             _context.SaveChanges();
 
             return Ok();
+        }
+
+        [HttpDelete]
+        public IHttpActionResult UnFollow(string id)
+        {
+            var userId = User.Identity.GetUserId();
+            var following = _context.Followings
+                .FirstOrDefault(f => f.FolloweeId == id
+                                    && f.FollowerId == userId);
+
+            if (following == null)
+            {
+                BadRequest("There is no such a following.");
+            }
+
+            _context.Followings.Remove(following);
+            _context.SaveChanges();
+
+            return Ok(id);
         }
     }
 }

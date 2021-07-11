@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace GigHub.Repositories
 {
-    public class AttendanceRepository
+    public class AttendanceRepository : IAttendanceRepository
     {
         private readonly ApplicationDbContext _context;
         public AttendanceRepository(ApplicationDbContext context)
@@ -22,7 +22,17 @@ namespace GigHub.Repositories
         public Attendance GetAttendance(int gigId, string userId)
         {
             return _context.Attendances
-                    .FirstOrDefault(a => a.GigId == gigId && a.AttendeeId == userId);
+                    .SingleOrDefault(a => a.GigId == gigId && a.AttendeeId == userId);
+        }
+
+        public void Add(Attendance attendance)
+        {
+            _context.Attendances.Add(attendance);
+        }
+
+        public void Remove(Attendance attendance)
+        {
+            _context.Attendances.Remove(attendance);
         }
     }
 }
